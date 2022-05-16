@@ -23,7 +23,11 @@
     text-decoration: none;
   }
 
-  a::after{
+  .navtext{
+    position: relative;
+  }
+
+  .navtext::after{
     content: "";
     position: absolute;
     background-color: var(--secondary-color);
@@ -34,7 +38,7 @@
     transition: 0.3s;
   }
 
-  a:hover::after{
+  .navtext:hover::after{
     width: 100%;
   }
   
@@ -209,6 +213,10 @@
   .displayblock {
     display: block;
     font-size: 30px;
+  }
+
+  .displayblock:hover{
+    color: var(--secondary-color);
   }
 
   .contactdiv {
