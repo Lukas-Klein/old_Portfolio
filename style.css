@@ -1,0 +1,264 @@
+@media (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    background-color: var(--primary-color);
+    /*scroll-snap-type: y proximity;          Snapping User onto Section*/
+    scroll-behavior: smooth;
+    margin: 0px;
+  }
+  section {
+    padding-left: 5%;
+    width: 90%;
+    height: 100vh;
+    scroll-snap-align: start;
+    color: var(--text-color);
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  a {
+    position: relative;
+    color: var(--text-color);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--secondary-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+  }
+
+  a:hover::after{
+    width: 100%;
+  }
+  
+
+  #button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+  }
+
+  #button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+  }
+
+  .menul {
+    float: left;
+    margin: 10px;
+    list-style-type: none;
+  }
+
+  .menur {
+    float: right;
+    margin: 10px;
+    list-style-type: none;
+    display: inline;
+  }
+
+  #navbar {
+    display: flex;
+  }
+
+  :root {
+    --primary-color: #010b169f;
+    --secondary-color: rgb(169, 252, 224);
+    --text-color: white;
+    --timeline-color: #071f2a;
+  }
+  .white-theme {
+    --primary-color: rgb(255, 253, 225);
+    --secondary-color: rgb(38, 133, 101);
+    --text-color: black;
+    --timeline-color: rgb(255, 253, 160);
+  }
+
+  #icon {
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
+  }
+
+  .progress-bar {
+    position: fixed;
+    height: 0%;
+    background: var(--secondary-color);
+    width: 8px;
+  }
+
+  .Home {
+    left: 0;
+    margin-top: -50px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    font-size: 30px;
+    color: var(--secondary-color);
+    line-height: 7px;
+  }
+
+  .smallhome {
+    font-size: 20px;
+  }
+  .welcometext {
+    font-size: 25px;
+    color: var(--text-color);
+    padding-top: 50px;
+  }
+
+  .text {
+    font-size: 40px;
+    color: var(--secondary-color);
+  }
+
+  .about {
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+  }
+
+  .Profilpic {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    border-radius: 50%;
+  }
+
+  .timeline {
+    padding: 30px 20px;
+  }
+  .timeline ul {
+    list-style-type: none;
+    border-left: 2px solid #094a68;
+    padding: auto;
+  }
+  .timeline ul li {
+    padding: 20px 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .timeline ul li span {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: black;
+    border-radius: 25px;
+    padding: 2px 5px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .timeline ul li .content h3 {
+    color: var(--secondary-color);
+    font-size: 18px;
+    padding-top: 5px;
+  }
+  .timeline ul li .content p {
+    padding: 5px 0px 15px 0px;
+    font-size: 16px;
+  }
+  .timeline ul li:before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    left: -11px;
+    top: 28px;
+    transition: 0.5s;
+  }
+  .timeline ul li:hover {
+    background-color: var(--timeline-color);
+  }
+  .timeline ul li:hover:before {
+    background-color: #0f0;
+  }
+
+  img {
+    height: 8vh;
+  }
+
+  .displayblock {
+    display: block;
+    font-size: 30px;
+  }
+
+  .contactdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    text-align: center;
+  }
+  .contactlinks {
+    margin: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Home {
+    top: 45%;
+    width: 95%;
+    padding-left: 2.5%;
+  }
+  .bighome {
+    font-size: 30px;
+    line-height: normal;
+  }
+  .smallhome {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .welcometext {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .about {
+    font-size: 18px;
+    line-height: normal;
+  }
+  #career {
+    height: 1400px;
+  }
+  #social {
+    height: 100%;
+  }
+  .displayblock {
+    font-size: 20px;
+  }
+  a {
+    font-size: 21px;
+  }
+  .contactlinks {
+    margin: 5%;
+  }
+
+  @media only screen and (max-width: 374px) {
+    .menur {
+      margin: 5px;
+    }
+    .menul {
+      margin: 5px;
+    }
+  }
+}
