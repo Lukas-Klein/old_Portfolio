@@ -189,6 +189,7 @@
   }
   .timeline ul li:hover {
     background-color: var(--timeline-color);
+    border-radius: 2rem;
   }
   .timeline ul li:hover:before {
     background-color: #0f0;
