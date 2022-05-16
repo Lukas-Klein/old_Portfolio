@@ -144,7 +144,12 @@
     border-radius: 50%;
   }
 
-  
+  .Profilpic:hover{
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: var(--secondary-color);
+  }
+
 
   .timeline {
     padding: 30px 20px;
