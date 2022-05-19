@@ -5,11 +5,11 @@ AOS.init({
 
 //Implementing the inactive website title
 window.onload = function () {
-  var pageTitle = document.title;
-  var attentionMessage = "Come Back! 😥";
+  let pageTitle = document.title;
+  let attentionMessage = "Come Back! 😥";
 
   document.addEventListener("visibilitychange", function () {
-    var isPageActive = !document.hidden;
+    let isPageActive = !document.hidden;
 
     if (!isPageActive) {
       document.title = attentionMessage;
@@ -20,7 +20,7 @@ window.onload = function () {
 };
 
 //implementing white mode toggle//
-var icon = document.getElementById("icon");
+let icon = document.getElementById("icon");
 
 const currentTheme = localStorage.getItem("theme");
 
@@ -45,7 +45,7 @@ icon.addEventListener("click", function () {
 
 //Implementing scroll to top button
 //Get the button
-var mybutton = document.getElementById("button");
+let mybutton = document.getElementById("button");
 
 // When the user scrolls down 900px from the top of the document, show the button
 window.onscroll = function () {
@@ -73,31 +73,31 @@ function topFunction() {
 
 //Scroll indicator
 function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  let scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.height = scrolled + "%";
 }
 
 //typewriting front page
-var bigtext = document.getElementById("textbig");
+let bigtext = document.getElementById("textbig");
 
-var typewriter = new Typewriter(bigtext, {
+let typewriter = new Typewriter(bigtext, {
   delay: 50,
 });
 
 typewriter.typeString("Hi, my name is Lukas Klein!").pauseFor(1000).start();
 
-var smalltext = document.getElementById("textsmall");
+let smalltext = document.getElementById("textsmall");
 
 const sleep = (milliseconds) => {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 };
 
 sleep(2000).then(() => {
-  var typewriter2 = new Typewriter(smalltext, {
+  let typewriter2 = new Typewriter(smalltext, {
     delay: 50,
   });
   typewriter2
