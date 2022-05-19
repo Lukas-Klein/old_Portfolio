@@ -167,12 +167,13 @@
     padding: 20px 20px;
     position: relative;
     cursor: pointer;
+    border-radius: 2rem;
     transition: 0.5s;
   }
   .timeline ul li span {
     display: inline-block;
     background-color: var(--timeline-color);
-    color: black;
+    color: var(--text-color);
     border-radius: 25px;
     padding: 2px 5px;
     font-size: 15px;
