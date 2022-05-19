@@ -89,10 +89,10 @@
     --timeline-color: #071f2a;
   }
   .white-theme {
-    --primary-color: rgb(255, 253, 225);
-    --secondary-color: rgb(38, 133, 101);
+    --primary-color: rgb(191, 236, 233);
+    --secondary-color: rgb(111, 0, 255);
     --text-color: black;
-    --timeline-color: rgb(255, 253, 160);
+    --timeline-color: rgb(185, 160, 255);
   }
 
   #icon {
