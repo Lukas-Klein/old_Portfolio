@@ -171,7 +171,7 @@
   }
   .timeline ul li span {
     display: inline-block;
-    background-color: var(--secondary-color);
+    background-color: var(--timeline-color);
     color: black;
     border-radius: 25px;
     padding: 2px 5px;
