@@ -23,11 +23,18 @@
     text-decoration: none;
   }
 
-  .navtext{
+  ::selection {
+    background: var(--hightlight-color); /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: var(--hightlight-color); /* WebKit/Blink Browsers */
+  }
+
+  .navtext {
     position: relative;
   }
 
-  .navtext::after{
+  .navtext::after {
     content: "";
     position: absolute;
     background-color: var(--secondary-color);
@@ -38,10 +45,9 @@
     transition: 0.3s;
   }
 
-  .navtext:hover::after{
+  .navtext:hover::after {
     width: 100%;
   }
-  
 
   #button {
     display: none;
@@ -87,12 +93,14 @@
     --secondary-color: rgb(169, 252, 224);
     --text-color: white;
     --timeline-color: #071f2a;
+    --hightlight-color: rgba(80, 255, 194, 0.2);
   }
   .white-theme {
     --primary-color: rgb(191, 236, 233);
     --secondary-color: rgb(111, 0, 255);
     --text-color: black;
     --timeline-color: rgb(185, 160, 255);
+    --hightlight-color: rgba(111, 0, 255, 0.2);
   }
 
   #icon {
@@ -148,12 +156,11 @@
     border-radius: 50%;
   }
 
-  .Profilpic:hover{
+  .Profilpic:hover {
     box-sizing: border-box;
     border: 2px solid;
     border-color: var(--secondary-color);
   }
-
 
   .timeline {
     padding: 30px 20px;
@@ -216,7 +223,7 @@
     font-size: 30px;
   }
 
-  .displayblock:hover{
+  .displayblock:hover {
     color: var(--secondary-color);
   }
 
