@@ -115,8 +115,6 @@ sleep(6500).then(() => {
 
 var style = getComputedStyle(document.body);
 
-console.log(style.getPropertyValue("--primary-color"));
-
 //confetti
 sleep(6500).then(() => {
   confetti({
