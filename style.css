@@ -107,7 +107,8 @@
     display: flex;
   }
 
-  :root {
+  :root,
+  .dark-theme {
     --primary-color: #010b169f;
     --secondary-color: #a9fce0;
     --text-color: #ffffff;
@@ -115,9 +116,9 @@
     --hightlight-color: rgba(80, 255, 194, 0.2);
   }
   .white-theme {
-    --primary-color: rgb(191, 236, 233);
-    --secondary-color: rgb(111, 0, 255);
-    --text-color: black;
+    --primary-color: #bfece9;
+    --secondary-color: #6f00ff;
+    --text-color: #000000;
     --timeline-color: rgb(185, 160, 255);
     --hightlight-color: rgba(111, 0, 255, 0.2);
   }

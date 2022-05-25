@@ -27,6 +27,8 @@ const currentTheme = localStorage.getItem("theme");
 if (currentTheme == "white") {
   document.body.classList.add("white-theme");
   icon.src = "fotos/moon.png";
+} else {
+  document.body.classList.add("dark-theme");
 }
 
 icon.addEventListener("click", function () {
@@ -37,6 +39,7 @@ icon.addEventListener("click", function () {
     theme = "white";
     icon.src = "fotos/moon.png";
   } else {
+    theme = "dark";
     icon.src = "fotos/sun.png";
   }
 
@@ -108,4 +111,25 @@ sleep(2000).then(() => {
 sleep(6500).then(() => {
   document.getElementById("textsmaller").innerHTML +=
     "Welcome to my portfolio Website.";
+});
+
+var style = getComputedStyle(document.body);
+
+console.log(style.getPropertyValue("--primary-color"));
+
+//confetti
+sleep(6500).then(() => {
+  confetti({
+    particleCount: 500,
+    startVelocity: 30,
+    spread: 360,
+    ticks: 900,
+    gravity: 0.5,
+    scalar: 0.8,
+    colors: [
+      style.getPropertyValue("--primary-color"),
+      style.getPropertyValue("--secondary-color"),
+      style.getPropertyValue("--text-color"),
+    ],
+  });
 });
