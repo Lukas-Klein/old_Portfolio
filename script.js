@@ -20,31 +20,43 @@ window.onload = function () {
 };
 
 //implementing white mode toggle//
-let icon = document.getElementById("icon");
-
+const toggle = document.getElementById("toggle");
+const body = document.body;
 const currentTheme = localStorage.getItem("theme");
 
 if (currentTheme == "white") {
-  document.body.classList.add("white-theme");
-  icon.src = "fotos/moon.png";
+  body.classList.add("white-theme");
 } else {
-  document.body.classList.add("dark-theme");
+  body.classList.add("dark-theme");
 }
 
-icon.addEventListener("click", function () {
-  document.body.classList.toggle("white-theme");
-
+toggle.addEventListener("input", (e) => {
+  const isChecked = e.target.checked;
   let theme = "dark";
-  if (document.body.classList.contains("white-theme")) {
+
+  if (isChecked) {
+    body.classList.add("white-theme");
     theme = "white";
-    icon.src = "fotos/moon.png";
   } else {
     theme = "dark";
-    icon.src = "fotos/sun.png";
+    body.classList.remove("white-theme");
   }
 
   localStorage.setItem("theme", theme);
+  localStorage.setItem("toggle", toggle.checked);
 });
+
+//checks state of toggle switch
+function isChecked() {
+  if (document.getElementById("toggle").checked == false) {
+    document.getElementById("toggle").checked =
+      localStorage.getItem("toggle") === "true";
+  }
+}
+
+window.onload = function () {
+  isChecked();
+};
 
 //Implementing scroll to top button
 //Get the button
@@ -54,6 +66,7 @@ let mybutton = document.getElementById("button");
 window.onscroll = function () {
   scrollFunction();
   myFunction();
+  stickynavbar();
 };
 
 function scrollFunction() {
@@ -73,6 +86,17 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
   window.location.hash = "home";
 }
+/*
+//make navbar stick to top
+let navbar = document.getElementById("navbar");
+let sticky = navbar.offsetTop;
+function stickynavbar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}*/
 
 //Scroll indicator
 function myFunction() {

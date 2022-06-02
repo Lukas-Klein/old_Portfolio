@@ -17,12 +17,21 @@
       <button onclick="topFunction()" id="button" title="Go back to the top">
         &#9650;
       </button>
-      <nav>
-        <li class="menul navtext lukas"><a href="#lukas"> lukas</a></li>
-        <img src="fotos/sun.png" class="menur" id="icon" />
-        <li class="menur navtext socials"><a href="#socials">socials</a></li>
-        <li class="menur navtext career"><a href="#career">career</a></li>
-      </nav>
+      <div id="navbar">
+        <li class="menul navtext lukas">
+          <a href="#lukas"> lukas</a>
+        </li>
+        <div class="toggle">
+          <input type="checkbox" id="toggle" class="menur toggle--checkbox" />
+          <label for="toggle" class="menur toggle--label"> </label>
+        </div>
+        <li class="menur navtext socials">
+          <a href="#socials">socials</a>
+        </li>
+        <li class="menur navtext career">
+          <a href="#career">career</a>
+        </li>
+      </div>
       <div class="Home" data-aos="zoom-in">
         <h1 class="bighome" id="textbig"></h1>
         <h2 class="smallhome" id="textsmall"></h2>

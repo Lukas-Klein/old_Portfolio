@@ -1,13 +1,30 @@
 @media (prefers-reduced-motion: no-preference) {
+  :root,
+  .dark-theme {
+    --primary-color: #010b169f;
+    --secondary-color: #a9fce0;
+    --text-color: #ffffff;
+    --timeline-color: #071f2a;
+    --hightlight-color: rgba(80, 255, 194, 0.2);
+    --yellow-background: #fffaa8;
+    --yellow-border: #f5eb71;
+    --gray-border: #e8e8ea;
+    --color-border: #d9fff2;
+  }
+  .white-theme {
+    --primary-color: #e7faff;
+    --secondary-color: #6f00ff;
+    --text-color: #000000;
+    --timeline-color: #d1fdfd;
+    --hightlight-color: rgba(111, 0, 255, 0.2);
+    --color-border: #e9d1ff;
+  }
+
   ::-webkit-scrollbar {
     width: 20px;
     background-color: var(--primary-color);
   }
 
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px var(--timeline-color);
-    border-radius: 10px;
-  }
   ::-webkit-scrollbar-thumb {
     background: var(--timeline-color);
     border-radius: 10px;
@@ -103,25 +120,113 @@
     display: inline;
   }
 
-  #navbar {
-    display: flex;
+  .toggle--checkbox {
+    display: none;
   }
 
-  :root,
-  .dark-theme {
-    --primary-color: #010b169f;
-    --secondary-color: #a9fce0;
-    --text-color: #ffffff;
-    --timeline-color: #071f2a;
-    --hightlight-color: rgba(80, 255, 194, 0.2);
+  .toggle--checkbox:checked + .toggle--label:before {
+    background: var(--yellow-background);
+    border-color: var(--yellow-border);
+    animation-name: switch;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
   }
-  .white-theme {
-    --primary-color: #bfece9;
-    --secondary-color: #6f00ff;
-    --text-color: #000000;
-    --timeline-color: rgb(185, 160, 255);
-    --hightlight-color: rgba(111, 0, 255, 0.2);
+  .toggle--checkbox:checked + .toggle--label:after {
+    transition-delay: 350ms;
+    opacity: 1;
   }
+  .toggle--label {
+    /** Placeholder element, starting at blue **/
+    width: 50px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 100px;
+    border: 3px solid var(--color-border);
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+    /** The sun cloud and moon stars **/
+    /** Sun/Moon element **/
+    /** Gray dots on the moon **/
+  }
+  .toggle--label-background {
+    width: 10px;
+    height: 5px;
+    border-radius: 5px;
+    position: relative;
+    background: var(--white);
+    left: 135px;
+    top: 45px;
+    transition: all 150ms ease-in;
+  }
+
+  .toggle--label:before {
+    animation-name: reverse;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    transition: all 350ms ease-in;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--gray-border);
+    top: -1px;
+    position: absolute;
+    border-radius: 82px;
+    background: white;
+  }
+  .toggle--label:after {
+    transition-delay: 0ms;
+    transition: all 250ms ease-in;
+    position: absolute;
+    content: "";
+    left: 30px;
+    top: 3px;
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  @keyframes switch {
+    0% {
+      left: 0px;
+    }
+    60% {
+      left: 0px;
+      width: 35px;
+    }
+    100% {
+      left: 24px;
+      width: 20px;
+    }
+  }
+  @keyframes reverse {
+    0% {
+      left: 24px;
+      width: 20px;
+    }
+    60% {
+      left: 0px;
+      width: 35px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    z-index: 1;
+  }
+
+   Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) 
+  .sticky + .content {
+    padding-top: 60px;
+  }
+  */
 
   #icon {
     width: 30px;
