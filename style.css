@@ -1,3 +1,9 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root,
   .dark-theme {
@@ -10,6 +16,12 @@
     --yellow-border: #f5eb71;
     --gray-border: #e8e8ea;
     --color-border: #d9fff2;
+    --contactlinks-height: 60vh;
+    --contactlinks-width: calc(var(--contactlinks-height) / 1.5);
+    --animation-color1: #71ffa0;
+    --animation-color2: #3ce3bf;
+    --animation-color3: #0044c2;
+    --text-colorrgb: #ffffff;
   }
   .white-theme {
     --primary-color: #e7faff;
@@ -18,6 +30,9 @@
     --timeline-color: #d1fdfd;
     --hightlight-color: rgba(111, 0, 255, 0.2);
     --color-border: #e9d1ff;
+    --animation-color1: #99fcff;
+    --animation-color2: #9ec0ff;
+    --animation-color3: #c887fd;
   }
 
   ::-webkit-scrollbar {
@@ -356,11 +371,82 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
     text-align: center;
   }
+
   .contactlinks {
-    margin: 10%;
+    margin: 70px;
+    width: var(--contactlinks-width);
+    height: var(--contactlinks-height);
+    background: var(--timeline-color);
+    padding: auto;
+    position: relative;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactlinks:hover {
+    color: var(--text-color);
+    font-size: 18px;
+    transition: color 1s;
+  }
+  .contactlinks:hover:before,
+  .contactlinks:hover:after {
+    animation: spin 0.5s linear infinite;
+  }
+
+  .contactlinks::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      var(--animation-color1),
+      var(--animation-color2) 43%,
+      var(--animation-color3)
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 3.5s linear infinite;
+  }
+
+  .contactlinks::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--contactlinks-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--contactlinks-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      var(--animation-color1),
+      var(--animation-color2) 43%,
+      var(--animation-color3)
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 3.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
   }
 }
 
@@ -400,6 +486,27 @@
   }
   .contactlinks {
     margin: 5%;
+    color: var(--text-color);
+    font-size: 13px;
+  }
+  .contactlinks:hover {
+    margin: 5%;
+    color: var(--text-color);
+    font-size: 13px;
+  }
+
+  .contactdiv {
+    position: relative;
+    flex-direction: column;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contactlinks::after {
+    background-image: none;
   }
 
   @media only screen and (max-width: 374px) {
