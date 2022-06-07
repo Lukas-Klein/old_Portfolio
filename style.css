@@ -302,9 +302,6 @@
     border-color: var(--secondary-color);
   }
 
-  .timeline {
-    padding: 30px 20px;
-  }
   .timeline ul {
     list-style-type: none;
     border-left: 2px solid #094a68;
@@ -449,72 +446,80 @@
     }
   }
 }
-
-@media only screen and (max-width: 600px) {
-  .Home {
-    top: 45%;
-    width: 95%;
-    padding-left: 2.5%;
-  }
-  .bighome {
-    font-size: 30px;
-    line-height: normal;
-  }
-  .smallhome {
-    font-size: 18px;
-    line-height: normal;
-  }
-  .welcometext {
-    font-size: 18px;
-    line-height: normal;
-  }
-  .about {
-    font-size: 18px;
-    line-height: normal;
-  }
+@media only screen and (max-height: 740px) {
   #career {
-    height: 1400px;
+    height: 200%;
   }
-  #social {
-    height: 100%;
-  }
-  .displayblock {
-    font-size: 20px;
-  }
-  a {
-    font-size: 21px;
-  }
-  .contactlinks {
-    margin: 5%;
-    color: var(--text-color);
-    font-size: 13px;
-  }
-  .contactlinks:hover {
-    margin: 5%;
-    color: var(--text-color);
-    font-size: 13px;
-  }
-
-  .contactdiv {
-    position: relative;
-    flex-direction: column;
-    height: 65vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contactlinks::after {
-    background-image: none;
-  }
-
-  @media only screen and (max-width: 374px) {
-    .menur {
-      margin: 5px;
+  @media only screen and (max-width: 600px) {
+    .Home {
+      top: 45%;
+      width: 95%;
+      padding-left: 2.5%;
     }
-    .menul {
-      margin: 5px;
+    .bighome {
+      font-size: 30px;
+      line-height: normal;
+    }
+    .smallhome {
+      font-size: 18px;
+      line-height: normal;
+    }
+    .welcometext {
+      font-size: 18px;
+      line-height: normal;
+    }
+    .about {
+      font-size: 18px;
+      line-height: normal;
+    }
+    #career {
+      height: 1400px;
+    }
+    .timeline li {
+      background-color: var(--timeline-color);
+      margin: 10px;
+    }
+    #social {
+      height: 100%;
+    }
+    .displayblock {
+      font-size: 20px;
+    }
+    a {
+      font-size: 21px;
+    }
+    .contactlinks {
+      margin: 5%;
+      color: var(--text-color);
+      font-size: 13px;
+    }
+    .contactlinks:hover {
+      margin: 5%;
+      color: var(--text-color);
+      font-size: 13px;
+    }
+
+    .contactdiv {
+      position: relative;
+      flex-direction: column;
+      height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contactlinks::after {
+      background-image: none;
+    }
+
+    @media only screen and (max-width: 374px) {
+      .menur {
+        margin: 5px;
+      }
+      .menul {
+        margin: 5px;
+      }
     }
   }
 }
