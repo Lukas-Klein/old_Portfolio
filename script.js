@@ -35,8 +35,18 @@ toggle.addEventListener("input", (e) => {
   let theme = "dark";
 
   if (isChecked) {
-    body.classList.add("white-theme");
     theme = "white";
+    swal("Be Careful!", "You should put on your sunglasses 😎", "info").then(
+      (pressed) => {
+        if (pressed && isChecked) {
+          body.classList.add("white-theme");
+          theme = "white";
+        } else {
+          document.getElementById("toggle").checked = false;
+          theme = "dark";
+        }
+      }
+    );
   } else {
     theme = "dark";
     body.classList.remove("white-theme");
@@ -57,6 +67,11 @@ function isChecked() {
 window.onload = function () {
   isChecked();
 };
+
+// When the user clicks on the arrow it goes to lukas section
+function arrowclick() {
+  document.getElementById("#lukas").scrollIntoView();
+}
 
 //Implementing scroll to top button
 //Get the button
@@ -142,7 +157,7 @@ var style = getComputedStyle(document.body);
 //confetti
 sleep(6500).then(() => {
   confetti({
-    particleCount: 500,
+    particleCount: 800,
     startVelocity: 30,
     spread: 360,
     ticks: 900,

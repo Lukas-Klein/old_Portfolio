@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta charset="UTF-8" />
@@ -9,11 +10,13 @@
     <title>Lukas Klein Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="fotos/logo2.jpg" type="image/x-icon" />
+    <link rel="icon" href="fotos/logo.jpg" type="image/x-icon" />
   </head>
   <body data-aos="ease-in">
+    <div class="background">
     <div class="progress-bar" id="myBar"></div>
     <section id="home">
+      <div class="widthreducer">
       <button onclick="topFunction()" id="button" title="Go back to the top">
         &#9650;
       </button>
@@ -37,11 +40,14 @@
         <h2 class="smallhome" id="textsmall" data-aos="zoom-in"></h2>
         <h3 class="welcometext" id="textsmaller" data-aos="zoom-in"></h3>
       </div>
+      <div class="arrow-down"><a href="#lukas"></a></div>
+    </div>
     </section>
     <section id="lukas">
+      <div class="widthreducer"></div>
       <div>
         <h3 class="text" data-aos="zoom-in">about me:</h3>
-        <img class="Profilpic" src="fotos/Lukas2.JPEG" data-aos="zoom-in" />
+        <img class="Profilpic" src="fotos/Lukas.JPEG" data-aos="zoom-in" />
         <p class="about" data-aos="zoom-in">
           My name is Lukas Klein, I am 20 years of age and studying computer
           sciene.<br />
@@ -51,13 +57,15 @@
           This is my first approach with Web Development &#128519;
         </p>
       </div>
+    </div>
     </section>
     <section id="career">
+      <div class="widthreducer">
       <div>
         <h4 class="text" data-aos="fade-right">career:</h4>
         <div class="timeline">
           <ul>
-            <li data-aos="fade-right"
+            <li data-aos="fade-right">
             <span>31st July 2018</span>
               <div class="content">
                 <h3>middle school graduation</h3>
@@ -105,8 +113,10 @@
           </ul>
         </div>
       </div>
+    </div>
     </section>
     <section id="socials">
+      <div class="widthreducer">
       <h5 class="text" data-aos="zoom-in">socials:</h5>
       <div class="contactdiv" data-aos="zoom-in">
         <div class="contactlinks">
@@ -149,6 +159,7 @@
           check out my LinkedIn Profile
         </div>
       </div>
+    </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
