@@ -157,7 +157,7 @@ var style = getComputedStyle(document.body);
 //confetti
 sleep(6500).then(() => {
   confetti({
-    particleCount: 800,
+    particleCount: 500,
     startVelocity: 30,
     spread: 360,
     ticks: 900,

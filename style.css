@@ -87,7 +87,7 @@
     background: var(--hightlight-color); /* WebKit/Blink Browsers */
   }
 
-  .background:before {
+  /*.background:before {
     content: "";
     background-image: var(--background-image);
     background-size: cover;
@@ -99,6 +99,7 @@
     z-index: -1;
     opacity: 0.6;
   }
+  */
 
   .navtext {
     position: relative;
@@ -277,7 +278,6 @@
 
   .Home {
     left: 0;
-    margin-top: 30px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -553,7 +553,7 @@
   }
   .contactlinks {
     margin: 5%;
-    color: var(--text-color);
+    color: none;
     font-size: 13px;
   }
   .contactlinks:hover {
