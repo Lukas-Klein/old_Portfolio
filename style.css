@@ -43,13 +43,13 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--timeline-color);
+    background: var(--secondary-color);
     border-radius: 10px;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
+    background: var(--timeline-color);
   }
 
   html,
