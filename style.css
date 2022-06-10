@@ -25,10 +25,10 @@
     --star-color: #fff;
   }
   .white-theme {
-    --primary-color: #ffffffb6;
+    --primary-color: #d7fcfaf6;
     --secondary-color: #8400ff;
     --text-color: #000000;
-    --timeline-color: #ceffff;
+    --timeline-color: #9dffff;
     --hightlight-color: rgba(55, 0, 255, 0.2);
     --color-border: #5435ff;
     --animation-color1: #20ffbc;
