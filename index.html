@@ -10,6 +10,7 @@
     <title>Lukas Klein Portfolio Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">   
     <link rel="icon" href="fotos/logo.jpg" type="image/x-icon" />
   </head>
   <body data-aos="ease-in">
@@ -38,31 +39,32 @@
         </li>
       </div>
       <div class="Home">
-        <h1 class="bighome" id="textbig" data-aos="zoom-in"></h1>
-        <h2 class="smallhome" id="textsmall" data-aos="zoom-in"></h2>
-        <h3 class="welcometext" id="textsmaller" data-aos="zoom-in"></h3>
+        <h1 class="bighome" id="textbig" data-aos="fade-down" data-aos-easing="fade-up"></h1>
+        <h2 class="smallhome" id="textsmall" data-aos="fade-down" data-aos-easing="fade-up"></h2>
+        <h3 class="welcometext" id="textsmaller" data-aos="fade-down" data-aos-easing="fade-up"></h3>
       </div>
       <div class="arrow-down"><a href="#lukas"></a></div>
-    </div>
     </section>
     <section id="lukas">
-      <div class="widthreducer"></div>
-      <div>
-        <h3 class="text" data-aos="zoom-in">about me:</h3>
-        <img class="Profilpic" src="fotos/Lukas.JPEG" data-aos="zoom-in" />
-        <p class="about" data-aos="zoom-in">
+        <h3 class="text" data-aos="fade-up">about me:</h3>
+        <img class="Profilpic" src="fotos/Lukas.JPEG" data-aos="fade-up" />
+        <p class="about" data-aos="fade-up">
           My name is Lukas Klein, I am 20 years of age and studying computer
           sciene.<br />
           I'm working at the Deutsche Telekom AG in a dual study program.<br />
           For my computer sciene study I attend the Provadis School of
           International Management & Technology Ltd in Frankfurt Höchst.<br /><br />
-          This is my first approach with Web Development &#128519;
         </p>
+        <div class="progicons" data-aos="fade-up">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/>
       </div>
-    </div>
+      <p class="about" id="progtext">These are all the programming languages I have already worked with &#128519;</p>
     </section>
     <section id="career">
-      <div class="widthreducer">
       <div>
         <h4 class="text" data-aos="fade-right">career:</h4>
         <div class="timeline">
@@ -115,12 +117,10 @@
           </ul>
         </div>
       </div>
-    </div>
     </section>
     <section id="socials">
-      <div class="widthreducer">
-      <h5 class="text" data-aos="zoom-in">socials:</h5>
-      <div class="contactdiv" data-aos="zoom-in">
+      <h5 class="text"data-aos="fade-up" data-aos-easing="fade-down">socials:</h5>
+      <div class="contactdiv" data-aos = "zoom-in">
         <div class="contactlinks">
           <a
             class="displayblock"
@@ -162,6 +162,11 @@
         </div>
       </div>
     </div>
+    </section>
+    <section class="visitor">
+      <p class="visitortext">This website has been viewed</p>
+      <h1 id="count" class="visitorcount">0</h1>
+      <p class="visitortext">times</p>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

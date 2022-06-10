@@ -123,6 +123,18 @@ function myFunction() {
   document.getElementById("myBar").style.height = scrolled + "%";
 }
 
+const countEl = document.getElementById("count");
+
+updatevisitorcount();
+
+function updatevisitorcount() {
+  fetch("https://api.countapi.xyz/update/kleinlukas.de/portfolio/?amount=1")
+    .then((res) => res.json())
+    .then((res) => {
+      countEl.innerHTML = res.value;
+    });
+}
+
 //typewriting front page
 let bigtext = document.getElementById("textbig");
 
