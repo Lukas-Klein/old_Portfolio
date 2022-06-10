@@ -548,6 +548,14 @@
   #career {
     height: 200%;
   }
+
+  #lukas {
+    height: 300%;
+  }
+
+  #progtext {
+    margin: 5%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .Home {
