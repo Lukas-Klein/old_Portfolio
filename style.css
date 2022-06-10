@@ -109,11 +109,11 @@
     content: "";
     position: absolute;
     background-color: var(--secondary-color);
-    height: 3px;
+    height: 2px;
     width: 0;
     left: 0;
     bottom: -4px;
-    transition: 0.3s;
+    transition: 0.25s;
   }
 
   .navtext:hover::after {
@@ -153,6 +153,34 @@
     margin: 10px;
     list-style-type: none;
     display: inline;
+  }
+
+  .spanLeft {
+    position: absolute;
+    left: -5px;
+    opacity: 0;
+    transition: 0.25s;
+    color: var(--secondary-color);
+  }
+
+  .spanRight {
+    position: absolute;
+    right: -5px;
+    opacity: 0;
+    transition: 0.25s;
+    color: var(--secondary-color);
+  }
+
+  .navtext:hover .spanLeft {
+    position: absolute;
+    left: -20px;
+    opacity: 1;
+  }
+
+  .navtext:hover .spanRight {
+    position: absolute;
+    right: -20px;
+    opacity: 1;
   }
 
   .toggle--checkbox {
