@@ -1,9 +1,3 @@
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   :root,
   .dark-theme {
@@ -52,6 +46,9 @@
     background: var(--timeline-color);
   }
 
+  /* ----------------------------------------------------------------------------- */
+  /* -----------------------------GENERAL SETTINGS-------------------------------- */
+  /* ----------------------------------------------------------------------------- */
   html,
   body {
     background-color: var(--primary-color);
@@ -80,6 +77,7 @@
     text-decoration: none;
   }
 
+  /* highlighting color of text etc. on website*/
   ::selection {
     background: var(--hightlight-color); /* WebKit/Blink Browsers */
   }
@@ -87,20 +85,9 @@
     background: var(--hightlight-color); /* WebKit/Blink Browsers */
   }
 
-  /*.background:before {
-    content: "";
-    background-image: var(--background-image);
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0.6;
-  }
-  */
-
+  /* ----------------------------------------------------------------------------- */
+  /* ---------------------------------FRONT PAGE---------------------------------  */
+  /* ----------------------------------------------------------------------------- */
   .navtext {
     position: relative;
   }
@@ -118,6 +105,34 @@
 
   .navtext:hover::after {
     width: 100%;
+  }
+
+  .navtext:hover .spanLeft {
+    position: absolute;
+    left: -20px;
+    opacity: 1;
+  }
+
+  .navtext:hover .spanRight {
+    position: absolute;
+    right: -20px;
+    opacity: 1;
+  }
+
+  .spanLeft {
+    position: absolute;
+    left: -5px;
+    opacity: 0;
+    transition: 0.25s;
+    color: var(--secondary-color);
+  }
+
+  .spanRight {
+    position: absolute;
+    right: -5px;
+    opacity: 0;
+    transition: 0.25s;
+    color: var(--secondary-color);
   }
 
   #button {
@@ -155,34 +170,6 @@
     display: inline;
   }
 
-  .spanLeft {
-    position: absolute;
-    left: -5px;
-    opacity: 0;
-    transition: 0.25s;
-    color: var(--secondary-color);
-  }
-
-  .spanRight {
-    position: absolute;
-    right: -5px;
-    opacity: 0;
-    transition: 0.25s;
-    color: var(--secondary-color);
-  }
-
-  .navtext:hover .spanLeft {
-    position: absolute;
-    left: -20px;
-    opacity: 1;
-  }
-
-  .navtext:hover .spanRight {
-    position: absolute;
-    right: -20px;
-    opacity: 1;
-  }
-
   .toggle--checkbox {
     display: none;
   }
@@ -194,12 +181,13 @@
     animation-duration: 350ms;
     animation-fill-mode: forwards;
   }
+
   .toggle--checkbox:checked + .toggle--label:after {
     transition-delay: 350ms;
     opacity: 1;
   }
+
   .toggle--label {
-    /** Placeholder element, starting at blue **/
     width: 50px;
     height: 20px;
     background: var(--primary-color);
@@ -208,10 +196,8 @@
     display: flex;
     position: relative;
     transition: all 350ms ease-in;
-    /** The sun cloud and moon stars **/
-    /** Sun/Moon element **/
-    /** Gray dots on the moon **/
   }
+
   .toggle--label-background {
     width: 10px;
     height: 5px;
@@ -360,6 +346,9 @@
     }
   }
 
+  /* ----------------------------------------------------------------------------- */
+  /* ---------------------------------ABOUT PAGE---------------------------------  */
+  /* ----------------------------------------------------------------------------- */
   .text {
     margin: 0;
     padding-top: 1%;
@@ -409,6 +398,9 @@
     margin-top: 0;
   }
 
+  /* ----------------------------------------------------------------------------- */
+  /* -------------------------------CAREER PAGE----------------------------------- */
+  /* ----------------------------------------------------------------------------- */
   .timeline ul {
     list-style-type: none;
     border-left: 2px solid #094a68;
@@ -463,6 +455,9 @@
     height: 8vh;
   }
 
+  /* ----------------------------------------------------------------------------- */
+  /* -------------------------------SOCIALS PAGE---------------------------------- */
+  /* ----------------------------------------------------------------------------- */
   .displayblock {
     display: block;
     font-size: 30px;
@@ -502,6 +497,13 @@
   .contactlinks:hover:before,
   .contactlinks:hover:after {
     animation: spin 0.5s linear infinite;
+  }
+
+  /*PROPERTY FOR BACKGROUND OF CONTACTCARD*/
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
   }
 
   .contactlinks::before {
@@ -554,6 +556,9 @@
     }
   }
 
+  /* ----------------------------------------------------------------------------- */
+  /* -------------------------------VISITOR PAGE---------------------------------- */
+  /* ----------------------------------------------------------------------------- */
   .visitor {
     display: flex;
     flex-direction: column;
@@ -575,6 +580,10 @@
     color: var(--secondary-color);
   }
 }
+
+/* ----------------------------------------------------------------------------- */
+/* --------------------------MEDIA ADJUSTMENT SECTION--------------------------- */
+/* ----------------------------------------------------------------------------- */
 @media only screen and (max-height: 740px) {
   #career {
     height: 200%;
@@ -663,14 +672,15 @@
   }
 }
 
+/* ----------------------------------------------------------------------------- */
+/* ------------------------------=-STARS PAGE----------------------------------- */
+/* ----------------------------------------------------------------------------- */
 #stars {
   width: 1px;
   height: 1px;
   background: transparent;
   animation: animStar 50s linear infite;
 
-  /* STARS */
-  /* ----------------------------------------------------------------------------- */
   box-shadow: 779px 1331px var(--star-color), 324px 42px var(--star-color),
     303px 586px var(--star-color), 1312px 276px var(--star-color),
     451px 625px var(--star-color), 521px 1931px var(--star-color),
