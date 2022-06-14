@@ -5,11 +5,12 @@ AOS.init({
 
 //Implementing the inactive website title
 window.onload = function () {
-  let pageTitle = document.title;
-  let attentionMessage = "Come Back! 😥";
+  isChecked();
+  var pageTitle = document.title;
+  var attentionMessage = "Come Back! 😥";
 
-  document.addEventListener("visibilitychange", function () {
-    let isPageActive = !document.hidden;
+  document.addEventListener("visibilitychange", function(e) {
+    var isPageActive = !document.hidden;
 
     if (!isPageActive) {
       document.title = attentionMessage;
@@ -63,10 +64,6 @@ function isChecked() {
       localStorage.getItem("toggle") === "true";
   }
 }
-
-window.onload = function () {
-  isChecked();
-};
 
 // When the user clicks on the arrow it goes to lukas section
 function arrowclick() {
