@@ -17,6 +17,7 @@
     --animation-color3: #0044c2;
     --text-colorrgb: #ffffff;
     --star-color: #fff;
+    --background-color: #000f1a;
   }
   .white-theme {
     --primary-color: #d7fcfaf6;
@@ -478,7 +479,7 @@
     margin: 70px;
     width: var(--contactlinks-width);
     height: var(--contactlinks-height);
-    background: var(--timeline-color);
+    background: var(--background-color);
     padding: auto;
     position: relative;
     color: transparent;
@@ -493,6 +494,7 @@
     color: var(--text-color);
     font-size: 18px;
     transition: color 1s;
+    background-color: var(--primary-color);
   }
   .contactlinks:hover:before,
   .contactlinks:hover:after {
