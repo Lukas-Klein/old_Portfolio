@@ -132,8 +132,6 @@ function updatevisitorcount() {
     });
 }
 
-//TEst
-
 //typewriting front page
 let bigtext = document.getElementById("textbig");
 
