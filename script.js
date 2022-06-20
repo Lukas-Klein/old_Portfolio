@@ -9,7 +9,7 @@ window.onload = function () {
   var pageTitle = document.title;
   var attentionMessage = "Come Back! 😥";
 
-  document.addEventListener("visibilitychange", function(e) {
+  document.addEventListener("visibilitychange", function (e) {
     var isPageActive = !document.hidden;
 
     if (!isPageActive) {
@@ -131,6 +131,8 @@ function updatevisitorcount() {
       countEl.innerHTML = res.value;
     });
 }
+
+//TEst
 
 //typewriting front page
 let bigtext = document.getElementById("textbig");
