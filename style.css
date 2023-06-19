@@ -17,7 +17,7 @@
     --animation-color3: #0044c2;
     --text-colorrgb: #ffffff;
     --star-color: #fff;
-    --background-color: #000f1a;
+    --background-color: #282c2c;
   }
   .white-theme {
     --primary-color: #d7fcfaf6;
@@ -30,6 +30,7 @@
     --animation-color2: #9ec0ff;
     --animation-color3: #a02bff;
     --star-color: #111;
+    --background-color: #ffffff;
   }
 
   ::-webkit-scrollbar {
@@ -52,7 +53,7 @@
   /* ----------------------------------------------------------------------------- */
   html,
   body {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     /*scroll-snap-type: y proximity;          Snapping User onto Section*/
     scroll-behavior: smooth;
     margin: 0px;

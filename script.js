@@ -37,17 +37,18 @@ toggle.addEventListener("input", (e) => {
 
   if (isChecked) {
     theme = "white";
-    swal("Be Careful!", "You should put on your sunglasses 😎", "info", {
-      buttons: ["Stay Dark", "Got em'"],
-    }).then((pressed) => {
-      if (pressed && isChecked) {
-        body.classList.add("white-theme");
-        theme = "white";
-      } else {
-        document.getElementById("toggle").checked = false;
-        theme = "dark";
-      }
-    });
+    body.classList.add("white-theme");
+    // swal("Be Careful!", "You should put on your sunglasses 😎", "info", {
+    //   buttons: ["Stay Dark", "Got em'"],
+    // }).then((pressed) => {
+    //   if (pressed && isChecked) {
+    //     body.classList.add("white-theme");
+    //     theme = "white";
+    //   } else {
+    //     document.getElementById("toggle").checked = false;
+    //     theme = "dark";
+    //   }
+    // });
   } else {
     theme = "dark";
     body.classList.remove("white-theme");
