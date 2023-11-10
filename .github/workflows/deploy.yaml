@@ -19,6 +19,6 @@ jobs:
           ssh-keyscan -H ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
           ls
       - name: connect pull build deploy
-        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -i /.ssh/id_rsa "cd ${{ secrets.WORK_DIR }}/${{ github.event.repository.name }} && sudo git checkout ${{ secrets.MAIN_BRANCH }} && sudo git pull && sudo rsync -a -v dist/ ../../www/old.kleinlukas.de/"
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -i /.ssh/id_rsa "cd ${{ secrets.WORK_DIR }}/${{ github.event.repository.name }} && sudo git checkout ${{ secrets.MAIN_BRANCH }} && sudo git pull && sudo rsync -a -v . ../../www/old.kleinlukas.de/"
       - name: cleanup
         run: rm -rf ~/.ssh
